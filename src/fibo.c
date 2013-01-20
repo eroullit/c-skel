@@ -1,3 +1,9 @@
+/**
+ * \file fibo.c
+ * \author written by Emmanuel Roullit emmanuel.roullit@gmail.com \copy 2013
+ * \date 2013
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -5,9 +11,16 @@
 #include <assert.h>
 #include <inttypes.h>
 
+/** \brief Order use by default */
 #ifndef DEFAULT_FIBO_ORDER
 #define DEFAULT_FIBO_ORDER 10
 #endif /* DEFAULT_FIBO_ORDER */
+
+/**
+ * \brief Print process usage on stdout
+ * \param[in]           pname	        Process name
+ * \param[in]           opt		Pointer to process option structure
+ */
 
 void show_usage(const char *pname, const struct option *opt)
 {
@@ -27,16 +40,35 @@ void show_usage(const char *pname, const struct option *opt)
 	}
 }
 
+/**
+ * \brief Print YAML header with the requested order on stdout
+ * \param[in]           order	        Requested Fibonacci sequence order
+ * \return similar return values as \c printf(3)
+ */
+
 int print_header(const uint64_t order)
 {
 	/* YAML header */
 	return printf("--- #Fibonacci sequence order %"PRIu64"\n", order);
 }
+
+/**
+ * \brief Print result as a YAML formatted list on stdout
+ * \param[in]           num		Number to print
+ * \return similar return values as \c printf(3)
+ */
+
 int print_fibo_result(const uint64_t num)
 {
 	/* YAML formatted list */
 	return printf("- %"PRIu64"\n", num);
 }
+
+/**
+ * \brief Calculate the Fibonnaci sequence
+ * \param[in]           order		Requested Fibonacci sequence order
+ * \return Always return 0
+ */
 
 int fibo(const uint64_t order)
 {
