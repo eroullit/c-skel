@@ -1,5 +1,5 @@
-FILE(GLOB sharness sharness.sh dabba-test-lib.sh dictkeys2values.py yaml2dict.py)
-FILE(GLOB test_scripts RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} t*.sh)
+FILE(GLOB sharness sharness.sh test-lib.sh fibo.py)
+FILE(GLOB test_scripts RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} t[0-9]*.sh)
 
 FOREACH(sharness_file ${sharness})
 	EXECUTE_PROCESS(COMMAND ${CMAKE_COMMAND} -E copy ${sharness_file} ${CMAKE_CURRENT_BINARY_DIR})
