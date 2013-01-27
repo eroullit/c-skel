@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import sys
+import yaml
 
 def fib(n):
     if n == 0:
@@ -8,7 +10,4 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-def fib_yaml(n=10):
-    print "---"
-    for i in range(n):
-    	    print "  -", fib(i)
+print yaml.dump(map(fib, range(int(sys.argv[1])+1)), default_flow_style=False, explicit_start=True)
