@@ -17,10 +17,16 @@
 # 51 Franklin St, Fifth Floor, Boston, MA 02110, USA
 #
 
+. ./paths.sh
 . ./sharness.sh
 
+PATH="$PATH:$PATH_TO_EXEC"
 PYTHON_PATH="$(command -v python)"
 test -n "$PYTHON_PATH" && test_set_prereq PYTHON
 "$PYTHON_PATH" -c "import yaml" > /dev/null 2>&1 && test_set_prereq PYTHON_YAML
+
+pyfibo() {
+    "$PYTHON_PATH" "$SHARNESS_TEST_DIRECTORY/fibo.py" $@
+}
 
 # vim: ft=sh:tabstop=4:et
