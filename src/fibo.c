@@ -73,18 +73,15 @@ int print_fibo_result(const uint64_t num)
 int fibo(const uint64_t order)
 {
 	/* a = F_0, b = F_1 */
-	uint64_t a = 0, b = 1, c, i;
+	uint64_t a = 0, b = 1, c = a, i = 0;
 
-	if (order == 0)
-		print_fibo_result(a);
-
-	for (i = 0; i < order; i++)
+	do
 	{
+		print_fibo_result(c);
 		c=a+b;
 		a=b;
 		b=c;
-		print_fibo_result(c);
-	}
+	}while(i++ < order);
 
 	return 0;
 }
