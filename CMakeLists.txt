@@ -21,9 +21,12 @@ SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6")
 SET(CPACK_PACKAGE_VENDOR "Emmanuel Roullit")
 SET(CPACK_PACKAGE_CONTACT "${CPACK_PACKAGE_VENDOR} <emmanuel.roullit@gmail.com>")
 SET(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_SOURCE_DIR}/debian/postinst;${CMAKE_SOURCE_DIR}/debian/shlibs")
-SET(CPACK_DEBIAN_PACKAGE_DESCRIPTION "C project skeleton")
+SET(CPACK_DEBIAN_PACKAGE_DESCRIPTION
+"Collection of tools and code to get your application a good start.
+ There are Cmake files, a test infrastructure and a directory to drop your code"
+)
 SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "C project skeleton.")
-SET(CPACK_PACKAGE_DESCRIPTION "The C project skeleton is here to get your application a good start.")
+SET(CPACK_PACKAGE_DESCRIPTION "Collection of tools and code to get your application a good start.")
 SET(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
 SET(CPACK_DEBIAN_PACKAGE_SECTION "devel") #e.g net, kde, java, games
 SET(CPACK_STRIP_FILES ON)
