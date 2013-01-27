@@ -1,4 +1,4 @@
-PROJECT(skeleton C)
+PROJECT(c-skel C)
 
 # States that CMake required version must be >= 2.6
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
