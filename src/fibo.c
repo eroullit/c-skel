@@ -4,6 +4,64 @@
  * \date 2013
  */
 
+/*
+
+=head1 NAME
+
+fibo - Print Fibonacci sequence to stdout
+
+=head1 SYNOPSIS
+
+dabbad [--order <order>][--help]
+
+=head1 DESCRIPTION
+
+This tool prints the Fibonacci sequence from 0 to the requested order.
+The output is formatted in YAML.
+
+=head1 EXAMPLES
+
+=over
+
+=item fibo
+
+Print the number of the Fibonacci sequence up to the order 10
+
+=item fibo --order 20
+
+Print the number of the Fibonacci sequence up to the order 20
+
+=item fibo --help
+
+Prints help content.
+
+=back
+
+=head1 AUTHOR
+
+Written by Emmanuel Roullit <emmanuel.roullit@gmail.com>
+
+=back
+
+=head1 COPYRIGHT
+
+=over
+
+=item Copyright © 2013 Emmanuel Roullit.
+
+=item License GPLv2+: GNU GPL version 2 or later <http://gnu.org/licenses/gpl.html>.
+
+=item This is free software: you are free to change and redistribute it.
+
+=item There is NO WARRANTY, to the extent permitted by law.
+
+=back
+
+=cut
+
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
