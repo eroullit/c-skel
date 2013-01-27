@@ -46,10 +46,10 @@ void show_usage(const char *pname, const struct option *opt)
  * \return similar return values as \c printf(3)
  */
 
-int print_header(const uint64_t order)
+int print_header(void)
 {
 	/* YAML header */
-	return printf("--- #Fibonacci sequence order %"PRIu64"\n", order);
+	return printf("---\n");
 }
 
 /**
@@ -119,6 +119,6 @@ int main(int argc, char ** argv)
 		}
 	}
 
-	print_header(order);
+	print_header();
 	return fibo(order);
 }
