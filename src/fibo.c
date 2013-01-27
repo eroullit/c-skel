@@ -72,8 +72,7 @@ int print_fibo_result(const uint64_t num)
 
 int fibo(const uint64_t order)
 {
-	/* a = F_0, b = F_1 */
-	uint64_t a = 0, b = 1, c = a, i = 0;
+	uint64_t a = 1, b = 0, c = 0, i = 0;
 
 	do
 	{
@@ -81,8 +80,9 @@ int fibo(const uint64_t order)
 		c=a+b;
 		a=b;
 		b=c;
-	}while(i++ < order);
+	} while(i++ < order);
 
+	printf("\n");
 	return 0;
 }
 
