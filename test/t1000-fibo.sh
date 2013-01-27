@@ -23,11 +23,7 @@ test_description="Test Fibonacci sequence calculator"
 
 order_max=100
 
-test_expect_success "Check executable presence" "
-	test -x fibo
-"
-
-cat expect <<EOF
+cat > expect <<EOF
 ---
 - 0
 - 1
@@ -39,6 +35,8 @@ cat expect <<EOF
 - 13
 - 21
 - 34
+- 55
+
 EOF
 
 test_expect_success "Print fibonacci sequence without order input" "
@@ -49,7 +47,7 @@ test_expect_success "Print fibonacci sequence without order input" "
 for i in $(seq $order_max)
 do
     test_expect_success PYTHON_YAML "Print fibonacci sequence up to order $i" "
-        python -c 'import yaml fibo; print yaml.dump(map(fibo.fib, range($i)), default_flow_style=False, explicit_start=True)' > expect &&
+        pyfibo $i > expect &&
         fibo --order $i > result &&
         test_cmp expect result
     "
