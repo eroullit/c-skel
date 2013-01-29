@@ -2,3 +2,29 @@ C project skeleton
 ------------------
 
 All what you need for proper project base.
+
+Prerequisites
+=============
+
+All you need are these packages to compile and run properly:
+	- cmake
+	- build-essantial
+
+Recommended optional packages:
+	- python-yaml
+	- doxygen
+
+Installation
+============
+
+To build out-of-tree:
+	$ mkdir build && cd build && cmake .. && make
+
+To install it after being built:
+	$ sudo make install/strip
+
+To build a debian package:
+	$ sudo make package
+
+To build a source tarball:
+	$ make package_source
