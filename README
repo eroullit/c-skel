@@ -28,5 +28,3 @@ To build a debian package:
 
 To build a source tarball:
 	$ make package_source
-
-EOF
